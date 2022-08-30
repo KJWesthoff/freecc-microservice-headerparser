@@ -14,7 +14,7 @@ router.get("/whoami", (req,res) => {
     
     
     res.json({
-        ipaddress:req.headers.host,
+        ipaddress:req.ip,
         language:req.headers['accept-language'],
         software:req.headers['user-agent']})
 })
@@ -28,7 +28,7 @@ router.get("/who", (req,res) => {
     
     
     res.json({
-        headers:req.headers})
+        headers:req.ip})
 })
 
 
